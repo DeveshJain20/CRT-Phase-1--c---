@@ -1,0 +1,2 @@
+pointer is a variable thet stors the memory address of another variable
+it is used to directly

@@ -1,0 +1,10 @@
+class can be public, private, & protected
+- it contains data members.
+- member function.
+- SYNTAX ~
+
+class classname {
+    // access specifiers (public, private & protected)
+    //data members (variables)
+    // member functions (methods)
+}
