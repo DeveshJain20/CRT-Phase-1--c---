@@ -1,27 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class sum{
-    public:
-
-int sumofarray(int nums[], int n)
+class Sum
 {
-    int sum = 0;
-    for (int i=0; i<n; i++)
+public:
+    int sumofArray(int nums[], int n)
     {
-        sum += nums[i];
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+
+            sum += nums[i];
+        }
+        return sum;
     }
-    return sum;
-}
 };
 
 int main()
 {
-    int arr[5] = {1,2,3,4,5};
-    int size sizeof(arr)/sizeof(arr[0]);
-    sum s1;
-    int ans = s1.sumofarray(arr, size);
-    cout<< ans <<endl;
+    int arr[5] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    Sum s1;
+    int ans = s1.sumofArray(arr, size);
+    cout << ans << endl;
 
     return 0;
 }

@@ -1,39 +1,42 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 class ATM
 {
-    private:
+private:
     int balance;
 
-    public:
-    
+public:
     ATM(int balance)
     {
         this->balance = balance;
     }
-    void withdraw(int amount)
+    // Withdraw Method of Atm
+    void Withdraw(int amount)
     {
-        if (amount > 10000)
+        if (amount > balance)
         {
-            cout<<"insuffient balance"<<endl;
-        }else
+            cout << "Insufficient Balance" << endl;
+        }
+        else
         {
             balance -= amount;
-            cout<<"amount withdrawn: "<<amount<<", remaining balance: "<<balance<<endl;
+            cout << "Amount Withdrawn: " << amount << endl;
         }
     }
-
-void showbalance()
-{
-    cout<<"current balance: "<<balance<<endl;
-}
+    // Show Balance Method of Atm
+    void ShowBalance()
+    {
+        cout << "Current Balance: " << balance << endl;
+    }
 };
+
 int main()
 {
     ATM a(5000);
-a.showbalance();
-a.withdraw(500);
-a.showbalance();
+    a.ShowBalance();
+    a.Withdraw(500);
+    a.ShowBalance();
 
-return 0;
+    return 0;
 }

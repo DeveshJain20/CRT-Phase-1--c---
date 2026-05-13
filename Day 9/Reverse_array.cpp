@@ -1,35 +1,31 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-void ReverseArray (int nums[], int n)
+void ReverseArray(int nums[], int n)
 {
-    int  = 0
-    int end = n-1;
+    int i = 0;
+    int j = n - 1;
 
-    while (i<j)
+    while (i < j)
     {
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;
-        i++
+        i++;
+        j--;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout << nums[i] << " ";
     }
 }
+
 int main()
 {
-    int arr[5];
-    int size = sizeof(arr)/sizeof(arr[0]);
-
-    for(int i = 0; i < size; i++)
-    {
-        cin >> arr[i];
-    }
+    int arr[5] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
 
     ReverseArray(arr, size);
-
-    for(int i = 0; i < size; i++)
-    {
-        cout << arr[i] << " ";
-    }
 
     return 0;
 }

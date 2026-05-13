@@ -1,43 +1,46 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
-class ATM{
+class ATM
+{
 private:
-int balance;
+    int balance;
 
 public:
-
-void setBalance(int balance)
-{
-    this->balance = balance;
-}
-void withdraw(int amount)
-
-{
-    if(amount > balance)
+    // Enacpsulation
+    void setBalance(int balance)
     {
-        cout<<"insufficient balance:" << endl;
+        this->balance = balance;
     }
-    else
+    // Withdraw Method of Atm
+    void Withdraw(int amount)
     {
-        balance -= amount;
-        cout << "amount withdrawn :" << amount << endl;
+        if (amount > balance)
+        {
+            cout << "Insufficient Balance" << endl;
+        }
+        else
+        {
+            balance -= amount;
+            cout << "Amount Withdrawn: " << amount << endl;
+        }
     }
-}
-
-int getBalance()
-{
-    return balance;
-}
+    // Show Balance Method of Atm
+    int getBalance()
+    {
+        return balance;
+    }
 };
+
 int main()
 {
     int n;
     cin >> n;
     ATM a;
     a.setBalance(n);
-    cout<<"Balance is :" << a.getBalance() <<endl;
-    a.withdraw(500);
-    cout <<"Balance is :" << a.getBalance() <<endl;
+    cout << "Balance is:" << a.getBalance() << endl;
+    a.Withdraw(500);
+    cout << "Balance is:" << a.getBalance() << endl;
 
     return 0;
 }

@@ -4,18 +4,16 @@ Write a C++ program that takes a temperature in Celsius as input,
 converts it to Fahrenheit, and prints the result.
 */
 
-
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     double celsius, fahrenheit;
-    cout << "Enter temperature in Celsius: ";
     cin >> celsius;
 
-    fahrenheit = (celsius * 9/5) + 32;
+    fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
 
-    cout << "Temperature in Fahrenheit: " << fahrenheit << endl;
+    cout << fahrenheit << endl;
     return 0;
-
 }
